@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "buildCommand": "next build",
   "framework": "nextjs",
   "builds": [
@@ -9,6 +10,12 @@
         "skipTypescriptChecks": true,
         "skipEslintChecks": true
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ],
   "env": {
