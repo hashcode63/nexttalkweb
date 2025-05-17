@@ -20,6 +20,14 @@ const nextConfig = {
   webpack: (config) => {
     config.externals = [...config.externals, 'canvas', 'jsdom'];
     return config;
+  },
+  generateBuildId: async () => {
+    // Generate a unique build ID
+    return 'nexttalk-' + Date.now();
+  },
+  // Add this to force routes manifest generation
+  async rewrites() {
+    return [];
   }
 };
 
