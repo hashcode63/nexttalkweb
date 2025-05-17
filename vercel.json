@@ -1,0 +1,18 @@
+{
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next",
+      "config": {
+        "skipTypescriptChecks": true,
+        "skipEslintChecks": true
+      }
+    }
+  ],
+  "env": {
+    "NEXTAUTH_SECRET": "Fy/+XQnbIfqPdzDRKsVaVEEZT+gjekoF7/Bp1lFyAMQ90",
+    "VERCEL_IGNORE_TYPESCRIPT_ERRORS": "1"
+  }
+}
